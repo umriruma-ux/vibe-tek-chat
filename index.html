@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>vibe-tek</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- شاشة تسجيل الدخول / إنشاء حساب -->
+    <section id="auth-screen" class="auth-screen">
+      <div class="auth-card">
+        <h1>vibe-tek</h1>
+        <p class="subtitle">دردشة فورية وسريعة على الجوال</p>
+
+        <input type="email" id="email-input" placeholder="البريد الإلكتروني" autocomplete="email" />
+        <input type="password" id="password-input" placeholder="كلمة المرور (6 أحرف فأكثر)" autocomplete="current-password" />
+
+        <div class="auth-actions">
+          <button id="login-btn" class="btn primary">تسجيل الدخول</button>
+          <button id="signup-btn" class="btn secondary">حساب جديد</button>
+        </div>
+        <p id="auth-error" class="error-msg"></p>
+      </div>
+    </section>
+
+    <!-- شاشة الدردشة الرئيسية -->
+    <section id="chat-screen" class="chat-screen hidden">
+      <header class="chat-header">
+        <div>
+          <h2>vibe-tek</h2>
+          <span id="user-badge" class="user-badge"></span>
+        </div>
+        <button id="logout-btn" class="btn small">خروج</button>
+      </header>
+
+      <main id="messages-list" class="messages-list"></main>
+
+      <form id="message-form" class="message-form">
+        <input type="text" id="message-input" placeholder="اكتب رسالتك هنا..." autocomplete="off" required />
+        <button type="submit" class="btn send-btn">إرسال</button>
+      </form>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+          </html>
+  
